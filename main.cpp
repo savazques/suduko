@@ -16,7 +16,9 @@ int main()
 
     cin>>difficulty;
 
-    
+    Sudoku sudoku(difficulty);  
+
+    sudoku.newBoard(); 
 
 
     return 0; 

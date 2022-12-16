@@ -18,11 +18,14 @@ public:
 int level; 
 
 //constructors
-    Sudoku();
+    Sudoku(); 
     
-    Sudoku(int level); 
+    Sudoku(int); 
 
 //methods
+
+    void newBoard(); 
+    
     void printBoard();
 
     void solveBoard();
