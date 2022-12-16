@@ -3,13 +3,13 @@
 CC = g++ -std=c++17
 CFLAGS = -g
 
-all: sudoku 
+all: main
 
-sudoku.o: sudoku.cpp 
-	$(CC) -c $(CFLAGS) sudoku.cpp 
+main.o: main.cpp 
+	$(CC) -c $(CFLAGS) main.cpp 
 
-sudoku: sudoku.o 
-	$(CC) -o sudoku sudoku.o 
+main: main.o 
+	$(CC) -o main main.o 
 
 clean:
-	rm -f  *.o *~ sudoku
+	rm -f  *.o *~ main
