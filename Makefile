@@ -12,7 +12,7 @@ main.o: main.cpp
 	$(CC) -c $(CFLAGS) main.cpp 
 
 main: main.o sudoku.o
-	$(CC) -o main main.o sudoku.o 
+	$(CC) -o main main.o
 
 clean:
-	rm -f  *.o *~ main
+	rm -f  *.o *~ main 
