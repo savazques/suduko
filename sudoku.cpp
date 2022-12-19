@@ -35,9 +35,11 @@
                 int value = 0;
 
                 board[i][j] = value;
-                cout<<board[i][j]; 
+                //this -> printBoard();
+                
             }
         }
+        this -> printBoard();
 
     }
 
@@ -50,19 +52,21 @@
     }
 
     void Sudoku :: printBoard()
-    {
-        int r = 9; 
-        int c = 9; 
+    {   
+        int board[row][column]; //board[3][3]
 
-        int mat[r][c]; 
-
-        for (int m = 0; m < 9; m++)
+        for (int i = 0; i < row; i++)
         {
-            for (int l = 0; l < c; l++)
+            for (int j = 0; j < column; j++)
             {
-                cout << mat[r][c] << "\n"[l == c-1 ];
+                int value = 0;
+
+                board[i][j] = value;
+                cout<< to_string(board[i][j]) ;
             }
+            cout<< endl;
         }
+        cout<<endl;
 
     }
 
