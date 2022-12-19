@@ -19,6 +19,7 @@ int main()
     Sudoku sudoku(difficulty);  
 
     sudoku.newBoard(); 
+    sudoku.printBoard();
 
 
     return 0; 

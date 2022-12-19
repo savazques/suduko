@@ -13,6 +13,8 @@ private:
 
     int column = 9; 
 
+    int **board;
+
 public:
 
 int level; 
@@ -26,7 +28,7 @@ int level;
 
     void newBoard(); 
 
-    void getValue();
+    int getValue(int);
     
     void printBoard();
 
