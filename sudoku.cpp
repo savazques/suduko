@@ -30,13 +30,23 @@
 
         for (int i = 0; i < row; i++)
         {
-            for(int j = 0; j < column; j++)
+            for (int j = 0; j < column; j++)
             {
-                cout<<board[i][j];
-            }
-        } 
-        
+                int value = 0;
 
+                board[i][j] = value;
+                
+            }
+        }
+
+    }
+
+    int getValue(int arg)
+    {
+        arg = (rand() % 10) + 1;
+
+        cout<<arg;
+        return arg;
     }
 
     void Sudoku :: printBoard()
