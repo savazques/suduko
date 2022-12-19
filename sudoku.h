@@ -25,6 +25,8 @@ int level;
 //methods
 
     void newBoard(); 
+
+    void getValue();
     
     void printBoard();
 
