@@ -14,11 +14,18 @@ int main()
     "3. Hard"<<"\n"<<
     "Enter 1 2 or 3: "<<endl;
 
+
     cin>>difficulty;
+
+    
+
+    int board[9][9];
 
     Sudoku sudoku(difficulty);  
 
     sudoku.newBoard(); 
+    //sudoku.printBoard();
+    sudoku.fillBoard();
     sudoku.printBoard();
 
 

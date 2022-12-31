@@ -9,15 +9,18 @@ class Sudoku
 private:
 
 //attributes
+
+
+    //int **board;
+
+public:
     int row = 9; 
 
     int column = 9; 
 
-    int **board;
+    int board[9][9];
 
-public:
-
-int level; 
+    int level; 
 
 //constructors
     Sudoku(); 
@@ -30,7 +33,9 @@ int level;
 
     int getValue(int);
     
-    void printBoard();
+    void printBoard(); 
+
+    bool fillBoard();
 
     void solveBoard();
 
