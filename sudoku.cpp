@@ -69,7 +69,7 @@ const int EMPTY = 0;
 
         for (int i = 0; i < 9 * 9; i++)
         {   
-            //essentially going through line by line
+            //essentially going through row by row
             row = i / 9; 
             col = i % 9;
 
@@ -79,10 +79,58 @@ const int EMPTY = 0;
                 int value = getValue(EMPTY); 
 
                 board[row][col] = value;  
-                
+
+                if(check(row,col,value))
+                {
+                    board[row][col] = value; 
+                    return true;
+                }
+                else
+                {
+                    int newValue = getValue(EMPTY); 
+                    board[row][col] = newValue;
+                    return false;
+                }
+               
+
             }
+
+            
         }
     }
+
+
+    bool Sudoku :: check(int r, int c, int v)
+    {
+        for (int i = 1; i < c + 1; i++)
+        {
+            int num = board[r][i];         
+
+            if (num == board[row][i - 1])
+                {
+                    return false;
+                }
+                else
+                {
+                    return true; 
+                }
+            }
+        
+        for (int k = 1; k < r + 1; k++)
+        {
+            int v = board[k][c];
+
+            if(v == board[k - 1][c])
+            {
+                return false; 
+            }
+            else
+            {
+                return true;
+            }
+        }
+        
+    } 
 
     void Sudoku :: solveBoard()
     {

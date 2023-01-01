@@ -36,6 +36,8 @@ public:
     void printBoard(); 
 
     bool fillBoard();
+    
+    bool check(int,int,int); 
 
     void solveBoard();
 
